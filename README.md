@@ -5,10 +5,10 @@ This is an SSH server running as root using the great Magisk systemless root sui
 
 ## Included software
 
-* [OpenSSL 1.0.2o](https://www.openssl.org/) (only needed for its libcrypto)
-* [OpenSSH 7.7p1](https://www.openssh.com/)
+* [OpenSSL 1.0.2p](https://www.openssl.org/) (only needed for its libcrypto)
+* [OpenSSH 7.9p1](https://www.openssh.com/)
 * [Rsync 3.1.3](https://rsync.samba.org/)
-* [Magisk Module Template v1500](https://github.com/topjohnwu/magisk-module-template)
+* [Magisk Module Template v17000](https://github.com/topjohnwu/magisk-module-template)
 
 ## Installation
 
@@ -41,6 +41,13 @@ Uninstalling the module via the Magisk Manager does not fully remove all data th
 [Source Code Repository](https://gitlab.com/d4rcm4rc/MagiskSSH)
 
 ## Changelog
+
+###### 2018-11-04
+
+- Version bumps (except rsync).
+- OpenSSL 1.0.2p
+- OpenSSH 7.9p1
+- Magisk Module Template v17000
 
 ###### 2018-07-16
 

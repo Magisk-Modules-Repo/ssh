@@ -94,6 +94,9 @@ set_permissions() {
   mkdir -p /data/ssh
   mkdir -p /data/ssh/root/.ssh
   mkdir -p /data/ssh/shell/.ssh
+  chown shell:shell /data/ssh/shell
+  chown shell:shell /data/ssh/shell/.ssh
+  chmod 700 /data/ssh/{shell,root}/.ssh
   [ -f /data/ssh/sshd_config ] || (cp -a $INSTALLER/common/sshd_config /data/ssh; chown root:root /data/ssh/sshd_config; chmod 600 /data/ssh/sshd_config)
 }
 
