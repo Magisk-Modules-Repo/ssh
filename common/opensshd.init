@@ -8,7 +8,7 @@ umask 022
 CAT=/system/bin/cat
 KILL=/system/bin/kill
 
-: ${MODDIR:=/magisk/ssh}
+: ${MODDIR:=/sbin/.magisk/img/ssh}
 export LD_LIBRARY_PATH="$MODDIR/usr/lib"
 prefix="$MODDIR/usr"
 sysconfdir=/data/ssh
