@@ -32,6 +32,11 @@ If you want to manually start/stop the sshd-service, you may do so using `/magis
 
 Uninstalling the module via the Magisk Manager does not fully remove all data that has been installed or created during execution. You may want to delete the `/data/ssh` folder from your device to remove all traces of this module.
 
+## Contributing
+
+Please don't file Pull Requests against the module repository. The module building is an automated process and will overwrite any changes to the files in the module repository.
+Feel free to create a Merge Request against the [source repository](https://gitlab.com/d4rcm4rc/MagiskSSH), instead.
+
 ## License
 
 [GPL v3](https://gitlab.com/d4rcm4rc/MagiskSSH/blob/master/LICENSE)
@@ -42,12 +47,18 @@ Uninstalling the module via the Magisk Manager does not fully remove all data th
 
 ## Changelog
 
-###### 2019-03-10
+###### 2019-03-16, v0.7
+
+- Bugfixes.
+- Avoid hardcoding MODDIR in opensshd.init
+- Use wrapper script for setting LD_LIBRARY_PATH instead of setting it in init script
+
+###### 2019-03-10, v0.6
 
 - Version bump.
 - OpenSSL 1.0.2r
 
-###### 2018-11-04
+###### 2018-11-04, v0.5
 
 - Version bumps (except rsync).
 - Set owner and permissions for shell directory
@@ -55,11 +66,11 @@ Uninstalling the module via the Magisk Manager does not fully remove all data th
 - OpenSSH 7.9p1
 - Magisk Module Template v17000
 
-###### 2018-07-16
+###### 2018-07-16, v0.4
 
 - Derive paths from $MODDIR instead of hardcoding /magisk
 
-###### 2018-04-06
+###### 2018-04-06, v0.3
 
 - Version bumps.
 - Fix sftp rename on filesystems without hardlinks (ie. FAT32)

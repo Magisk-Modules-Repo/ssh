@@ -87,8 +87,14 @@ set_permissions() {
   set_perm_recursive  $MODPATH  0  0  0755  0644
 
   cp -af $INSTALLER/common/$ARCH $MODPATH/usr
+  mkdir $MODPATH/usr/bin/raw
+  cp -af $INSTALLER/common/magisk_ssh_library_wrapper $MODPATH/usr/bin/raw
+  for f in scp sftp sftp-server ssh ssh-keygen sshd; do
+    mv $MODPATH/usr/bin/$f $MODPATH/usr/bin/raw/$f
+    ln -s ./raw/magisk_ssh_library_wrapper $MODPATH/usr/bin/$f
+  done
   cp -af $INSTALLER/common/opensshd.init $MODPATH/
-  chmod 755 $MODPATH/usr/bin/*
+  chmod -r 755 $MODPATH/usr/bin
   chmod 755 $MODPATH/opensshd.init
   ln -s ./libcrypto.so.1.0.0 $MODPATH/usr/lib/libcrypto.so
   mkdir -p /data/ssh
