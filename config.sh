@@ -94,7 +94,7 @@ set_permissions() {
     ln -s ./raw/magisk_ssh_library_wrapper $MODPATH/usr/bin/$f
   done
   cp -af $INSTALLER/common/opensshd.init $MODPATH/
-  chmod -r 755 $MODPATH/usr/bin
+  chmod -R 755 $MODPATH/usr/bin
   chmod 755 $MODPATH/opensshd.init
   ln -s ./libcrypto.so.1.0.0 $MODPATH/usr/lib/libcrypto.so
   mkdir -p /data/ssh

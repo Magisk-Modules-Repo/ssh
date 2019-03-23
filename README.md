@@ -47,6 +47,11 @@ Feel free to create a Merge Request against the [source repository](https://gitl
 
 ## Changelog
 
+###### 2019-03-23, v0.8
+
+- Bugfix.
+- Correctly apply permissions to bin/raw files
+
 ###### 2019-03-16, v0.7
 
 - Bugfixes.
