@@ -9,6 +9,7 @@ CAT=/system/bin/cat
 KILL=/system/bin/kill
 
 : ${MODDIR:="$(realpath "$(dirname "$0")")"}
+export MODDIR
 prefix="$MODDIR/usr"
 sysconfdir=/data/ssh
 piddir=/data/ssh
