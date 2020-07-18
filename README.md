@@ -5,9 +5,9 @@ This is an SSH server running as root using the great Magisk systemless root sui
 
 ## Included software
 
-* [OpenSSL 1.0.2t](https://www.openssl.org/) (only needed for its libcrypto)
-* [OpenSSH 8.1p1](https://www.openssh.com/)
-* [Rsync 3.1.3](https://rsync.samba.org/)
+* [OpenSSL 1.1.1g](https://www.openssl.org/) (only needed for its libcrypto)
+* [OpenSSH 8.3p1](https://www.openssh.com/)
+* [Rsync 3.2.2](https://rsync.samba.org/)
 * [Magisk Module Installer](https://github.com/topjohnwu/magisk-module-installer)
 
 ## Installation
@@ -26,7 +26,7 @@ The ssh daemon automatically starts on device boot. If this is undesired, you ca
 
 Once you have written a valid SSH public key into an `authorized_keys` file (see section 'Configuration' above), you can connect to the device using `ssh shell@<device_ip>` (unprivileged access) or `ssh root@<device_ip>` (privileged access), while supplying the correct private key. You will drop into a shell on the device. sftp and rsync should work as usual.
 
-If you want to manually start/stop the sshd-service, you may do so using `/magisk/ssh/opensshd.init start` and `/magisk/ssh/opensshd.init stop`. This is usually not necessary but may be useful if you use the `no-autostart` file described earlier.
+If you want to manually start/stop the sshd-service, you may do so using `/data/adb/modules/ssh/opensshd.init start` and `/data/adb/modules/ssh/opensshd.init stop`. This is usually not necessary but may be useful if you use the `no-autostart` file described earlier.
 
 ## Uninstallation
 
@@ -46,6 +46,14 @@ Feel free to create a Merge Request against the [source repository](https://gitl
 [Source Code Repository](https://gitlab.com/d4rcm4rc/MagiskSSH)
 
 ## Changelog
+
+###### 2020-07-18, v0.11
+
+- Version bump.
+- OpenSSL 1.1.1g
+- OpenSSH 8.3p1
+- Rsync 3.2.2
+- Magisk installer v20.4
 
 ###### 2019-11-26, v0.10
 

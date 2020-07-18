@@ -153,7 +153,7 @@ on_install() {
   done
 
   ui_print "[4/7] Recreating symlinks"
-  ln -s ./libcrypto.so.1.0.0 "$MODPATH/usr/lib/libcrypto.so"
+  ln -s ./libcrypto.so.1.1 "$MODPATH/usr/lib/libcrypto.so"
 
   ui_print "[5/7] Creating SSH user directories"
   mkdir -p /data/ssh
