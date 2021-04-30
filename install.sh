@@ -147,7 +147,7 @@ on_install() {
   mv "$TMPDIR/arch/$ARCH/bin"/* "$MODPATH/usr/bin"
 
   ui_print "[3/7] Configuring library path wrapper"
-  for f in scp sftp sftp-server ssh ssh-keygen sshd; do
+  for f in scp sftp sftp-server ssh ssh-keygen sshd rsync; do
     mv "$MODPATH/usr/bin/$f" "$MODPATH/usr/bin/raw/$f"
     ln -s ./raw/magisk_ssh_library_wrapper "$MODPATH/usr/bin/$f"
   done
