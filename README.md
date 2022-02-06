@@ -26,7 +26,7 @@ The ssh daemon automatically starts on device boot. If this is undesired, you ca
 
 Once you have written a valid SSH public key into an `authorized_keys` file (see section 'Configuration' above), you can connect to the device using `ssh shell@<device_ip>` (unprivileged access) or `ssh root@<device_ip>` (privileged access), while supplying the correct private key. You will drop into a shell on the device. sftp and rsync should work as usual.
 
-If you want to manually start/stop the sshd-service, you may do so using `/data/adb/modules/ssh/opensshd.init start` and `/data/adb/modules/ssh/opensshd.init stop`. This is usually not necessary but may be useful if you use the `no-autostart` file described earlier.
+If you want to manually start/stop the sshd-service, you may do so using `/data/adb/modules_update/ssh/opensshd.init start` and `/data/adb/modules_update/ssh/opensshd.init stop`. This is usually not necessary but may be useful if you use the `no-autostart` file described earlier.
 
 ## Uninstallation
 
