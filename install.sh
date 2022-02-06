@@ -187,6 +187,7 @@ set_permissions() {
   chown shell:shell /data/ssh/shell/.ssh
   chown root:root /data/ssh/root
   chown root:root /data/ssh/root/.ssh
+  chmod 700 /data/ssh/{shell,root}
   chmod 700 /data/ssh/{shell,root}/.ssh
 }
 
