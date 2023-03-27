@@ -152,23 +152,20 @@ on_install() {
     ln -s ./raw/magisk_ssh_library_wrapper "$MODPATH/usr/bin/$f"
   done
 
-  ui_print "[4/7] Recreating symlinks"
-  ln -s ./libcrypto.so.3 "$MODPATH/usr/lib/libcrypto.so"
-
-  ui_print "[5/7] Creating SSH user directories"
+  ui_print "[4/6] Creating SSH user directories"
   mkdir -p /data/ssh
   mkdir -p /data/ssh/root/.ssh
   mkdir -p /data/ssh/shell/.ssh
 
   if [ -f /data/ssh/sshd_config ]; then
-    ui_print "[6/7] Found sshd_config, will not copy a default one"
+    ui_print "[5/6] Found sshd_config, will not copy a default one"
   else
-    ui_print "[6/7] Extracting sshd_config"
+    ui_print "[5/6] Extracting sshd_config"
     unzip -o "$ZIPFILE" 'common/sshd_config' -d "$TMPDIR" >&2
     mv "$TMPDIR/common/sshd_config" '/data/ssh/'
   fi
 
-  ui_print "[7/7] Cleaning up"
+  ui_print "[6/6] Cleaning up"
   rm -rf "$TMPDIR"
 }
 

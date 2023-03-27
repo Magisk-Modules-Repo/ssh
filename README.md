@@ -1,13 +1,13 @@
 MagiskSSH
 =========
 
-This is an SSH server running as root using the great Magisk systemless root suite. It includes binaries for arm, arm64, x86, x86_64, mips and mips64. However, only arm64 has been tested at all. It requires Android API version 23 or higher (Android 6.0 Marshmallow and higher).
+This is an SSH server running as root using the great Magisk systemless root suite. It includes binaries for arm, arm64, x86, x86_64. However, only arm64 has been tested at all. It requires Android API version 24 or higher (Android 7.0 Nougat and higher).
 
 ## Included software
 
-* [OpenSSL 3.0.1](https://www.openssl.org/) (only needed for its libcrypto)
-* [OpenSSH 8.8p1](https://www.openssh.com/)
-* [Rsync 3.2.3](https://rsync.samba.org/)
+* [OpenSSL 3.1.0](https://www.openssl.org/) (only needed for its libcrypto)
+* [OpenSSH 9.3p1](https://www.openssh.com/)
+* [Rsync 3.2.7](https://rsync.samba.org/)
 * [Magisk Module Installer](https://github.com/topjohnwu/magisk-module-installer)
 
 ## Installation
@@ -52,6 +52,17 @@ Feel free to create a Merge Request against the [source repository](https://gitl
 [Source Code Repository](https://gitlab.com/d4rcm4rc/MagiskSSH)
 
 ## Changelog
+
+###### 2023-03-26, v0.15
+
+- Version bump.
+- OpenSSL 3.1.0
+- OpenSSH 9.3p1
+- Rsync 3.2.7
+- Drop mips and mips64 support
+- Build using NDK r25c, simplify building and updating a bit
+- Shrink package (strip binaries, use stronger compression)
+- Add updateJson mechanism for updating on Magisk v24 and later (thanks tamas646)
 
 ###### 2022-02-19, v0.14
 
